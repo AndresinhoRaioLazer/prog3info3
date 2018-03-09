@@ -24,6 +24,35 @@ class CrudCategoria
         //select
         //return
     }
+
+    public function getCategoria(int $id){
+
+        //faz conexao
+        $this->conexao = DBConnection::getConexao();
+
+        //criando consulta
+        $sql = "select * from categoria where id_categoria=".$id;
+
+        //executa a consulta
+        $result = $this->conexao = query($sql);
+
+        //transforma o resultado em array
+        $categoria = $result->fetch(PDO::FETCH_ASSOC);
+
+        //instnciar um objeto do tipo categoria com os valores recebidos
+        $objcat = new Categoria($categoria['id_categoria'],$categoria['nome_categoria'],$categoria['descricao_categoria']);
+
+        //retorna objeto criado
+        return $objcat;
+    }
+
+    public function InsertCategoria(Categoria $cat){
+
+    }
+
+    public function UpdateCategoria(Categoria $cat){
+
+    }
 }
 
 $crud = new CrudCategoria();
