@@ -11,13 +11,16 @@
             <th>#</th>
             <th>Nome da Categoria</th>
         </tr>
-        <?php foreach($categorias as $categoria); ?>
+
+        <?php foreach($categorias as $categoria): ?>
         <tr>
-            <td><?= $categoria->getId(); ?></td>
-            <td><?= $categoria->getNome(); ?></td>
+            <td><?= $categoria->getIdCategoria(); ?></td>
+            <td><a href="?acao=exibir&id=<?= $categoria->getIdCategoria(); ?>" ><?= $categoria->getNome(); ?></a></td>
         </tr>
+
         <?php endforeach; ?>
     </table>
 
 </body>
+
 </html>
