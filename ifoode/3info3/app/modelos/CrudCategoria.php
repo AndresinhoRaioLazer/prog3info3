@@ -1,6 +1,7 @@
 <?php
 
-require_once 'DBConnection.php';
+require_once "DBConnection.php";
+require_once "Categoria.php";
 
 class CrudCategoria
 {
@@ -21,8 +22,6 @@ class CrudCategoria
         }
 
         return $listaCategorias;
-        //select
-        //return
     }
 
     public function getCategoria(int $id){
@@ -47,10 +46,51 @@ class CrudCategoria
     }
 
     public function InsertCategoria(Categoria $cat){
+        //conexao
+        $this->conexao = DBConnection::getConexao();
+
+        //inserir dado
+        $sql = "insert into categoria (nome_categoria, descricao_categoria) values ('{$cat->getNome()}', '{$cat->getDescricao()}')";
+
+        //erro
+        try{
+            $this->conexao->exec($sql);
+        }catch (PDOException $e){
+            return $e->getMessage();
+        }
 
     }
 
     public function UpdateCategoria(Categoria $cat){
+        //conexao
+        $this->conexao = DBConnection::getConexao();
+
+        //atualizar dado
+        $sql = "update categoria set (nome_categoria=$cat->getNome(), descricao_categoria=$cat->getDescricao()) where id_categoria=$cat->getId()";
+
+        //erro
+        try{
+            $this->conexao->exec($sql);
+        }catch (PDOException $e){
+            return $e->getMessage();
+        }
+
+    }
+
+
+    public function DeleteCategoria(Categoria $cat){
+        //conexao
+        $this->conexao = DBConnection::getConexao();
+
+        //deletar dado
+        $sql = "delete from categoria where id_categoria=$cat->getId()";
+
+        //erro
+        try{
+            $this->conexao->exec($sql);
+        }catch (PDOException $e){
+            return $e->getMessage();
+        }
 
     }
 }
