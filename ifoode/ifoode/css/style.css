@@ -1,0 +1,28 @@
+html {
+    background-color: #E6E6FA;
+    color: #551A8B;
+    text-align: center;
+}
+#topo h1 {
+    font-size: 75px;
+    color: #551A8B;
+}
+#menu {
+    margin: 30px;
+}
+#menu a {
+    color:#551A8B;
+    margin: 20px;
+    text-decoration:none;
+}
+#menu a:hover {
+    background-color:#8968CD;
+    color: #E6E6FA;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+}
+#rodape {
+    padding: 10px;
+    margin-top: 900px;
+}
