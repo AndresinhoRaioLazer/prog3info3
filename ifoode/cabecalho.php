@@ -18,8 +18,7 @@
     <a href="produtos.php?cat=1">Frutos do Mar</a>
     <a href="produtos.php?cat=2">Calóricos</a>
     <a href="produtos.php?cat=3">Japonês</a>
-    <a href="produtos.php?cat=4">Vegetariano</a>
-    <a href="produtos.php?cat=5">Sãbley</a><br><br>
+    <a href="produtos.php?cat=4">Vegetariano</a><br><br>
 </div>
 
 

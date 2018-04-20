@@ -1,11 +1,7 @@
-<html>
+<h1>Categorias</h1>
 
-<head>
-    <title>categoria</title>
-</head>
+<a href="?acao=inserir"> Inserir Categorias</a>
 
-<body>
-    <h1>Categorias</h1>
     <table>
         <tr>
             <th>#</th>
@@ -20,7 +16,3 @@
 
         <?php endforeach; ?>
     </table>
-
-</body>
-
-</html>

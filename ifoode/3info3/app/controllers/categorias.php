@@ -12,12 +12,9 @@ switch ($acao){
     case 'index':
         $crud = new CrudCategoria();
         $categorias = $crud->getCategorias();
-        echo ('<pre>');
+        include '../views/templates/cab.php';
         include '../views/categorias/index.php';
-        break;
-
-    case 'inserir':
-        echo 'Você escolheu INSERIR';
+        include '../views/templates/rod.php';
         break;
 
     case 'exibir':
@@ -25,6 +22,12 @@ switch ($acao){
         $crud = new CrudCategoria();
         $categorias = $crud->getCategoria($id);
         include '../views/categorias/exibir.php';
+        break;
+
+    case 'inserir':
+        include '../views/templates/cab.php';
+        include '../views/categorias/inserir.php';
+        include '../views/templates/rod.php';
         break;
 
     default:

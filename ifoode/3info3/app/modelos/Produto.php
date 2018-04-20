@@ -14,7 +14,7 @@ class Produto{
         $this->descricao = $descricao;
         $this->foto = $foto;
         $this->preco = $preco;
-        //$this->id_categoria = $id_categoria;
+        $this->id_categoria = $id_categoria;
     }
 
     public function getId()
