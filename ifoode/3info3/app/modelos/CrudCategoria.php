@@ -33,7 +33,7 @@ class CrudCategoria
         $sql = "select * from categoria where id_categoria=".$id;
 
         //executa a consulta
-        $result = $this->conexao = query($sql);
+        $result = $this->conexao->query($sql);
 
         //transforma o resultado em array
         $categoria = $result->fetch(PDO::FETCH_ASSOC);
@@ -97,5 +97,3 @@ class CrudCategoria
 
 $crud = new CrudCategoria();
 $cats = $crud->getCategorias();
-
-print_r($cats);

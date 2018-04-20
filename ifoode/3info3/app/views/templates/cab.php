@@ -6,9 +6,3 @@
     <link rel="stylesheet" type="text/css" href="">
 </head>
 <body>
-
-
-<div id="topo">
-    <h1>IFoode</h1>
-    <h3>Departamento alimentício.</h3>
-</div>
