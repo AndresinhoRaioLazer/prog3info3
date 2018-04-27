@@ -37,6 +37,7 @@ switch ($acao){
             $crud->InsertCategoria($novaCat);
             header('Location: categorias.php');
         }
+        break;
 
     case 'alterar':
         if (!isset($_POST['gravar'])){
@@ -55,9 +56,11 @@ switch ($acao){
             $crud->InsertCategoria($novaCat);
             header('Location: categorias.php');
         }
+        break;
 
 
         default:
         echo "Ação inválida";
 
 }
+

@@ -94,6 +94,3 @@ class CrudCategoria
 
     }
 }
-
-$crud = new CrudCategoria();
-$cats = $crud->getCategorias();
